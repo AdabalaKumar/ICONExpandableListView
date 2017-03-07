@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" BackgroundColor="White" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  x:Class="ICONExpandableListView.MainPage" x:Name="Page"   >
+	<ContentPage.Content  >
+		<StackLayout Padding="15,20,15,0" >
+
+		<ListView SeparatorVisibility="None"   IsGroupingEnabled="True" ItemsSource="{Binding WifiInfoList}" RowHeight="60" HasUnevenRows="false" >
+    <ListView.GroupHeaderTemplate>
+      <DataTemplate>
+        <ViewCell  >
+			
+          <ContentView Padding="1,0,0,1"  >
+								
+						<StackLayout Orientation="Horizontal"   HorizontalOptions="FillAndExpand" Padding="1,0,5,0" BackgroundColor="#DCDCDC">
+							<Image Source="ExpandArrow.png"  Rotation="{Binding Key.WifiInfo.Rotation}"  HorizontalOptions="Start">
+							 <Image.HeightRequest>
+						           <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="25" />
+					          </Image.HeightRequest>
+										<Image.WidthRequest>
+						           <OnPlatform x:TypeArguments="x:Double" iOS="20" Android="25" />
+					          </Image.WidthRequest>
+							</Image>
+							 <Label Text="{Binding Key.WifiInfo.WifiName}" Font="Bold,16" HorizontalOptions="Start" VerticalOptions="Center" />
+								<Label HorizontalOptions="CenterAndExpand" />
+							<Button Text="i" BackgroundColor="White" HorizontalOptions="End"  VerticalOptions="Center"  >
+							  <Button.HeightRequest>
+						           <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="40" />
+					          </Button.HeightRequest>
+										<Button.WidthRequest>
+						           <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="40" />
+					          </Button.WidthRequest>
+							</Button>
+							<!--<StackLayout.GestureRecognizers>
+                              <TapGestureRecognizer Tapped="Handle_Tapped" NumberOfTapsRequired="2"  />
+                			</StackLayout.GestureRecognizers>-->	
+						</StackLayout>
+            <ContentView.GestureRecognizers>
+									
+             <TapGestureRecognizer   Command="{Binding Source={x:Reference Page}, Path=BindingContext.SelectedCommand}" CommandParameter="{Binding .}"/>
+            </ContentView.GestureRecognizers>
+						
+          </ContentView>
+						
+        </ViewCell>
+      </DataTemplate>
+    </ListView.GroupHeaderTemplate>
+    <ListView.ItemTemplate>
+      <DataTemplate >
+		<ViewCell>
+				
+             <ViewCell.View >
+				<StackLayout BackgroundColor="White" >
+					<StackLayout Orientation="Horizontal" Padding="25,0,20,0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                        <StackLayout  VerticalOptions="CenterAndExpand" >
+                              <Button   VerticalOptions="CenterAndExpand"  BackgroundColor="{Binding devicestatus}" > 
+	                               <Button.HeightRequest>
+						           <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+					          </Button.HeightRequest>
+										<Button.WidthRequest>
+						           <OnPlatform x:TypeArguments="x:Double" iOS="40" Android="40" />
+					          </Button.WidthRequest>
+							    <Button.BorderRadius>
+             						 <OnIdiom x:TypeArguments="x:Int32" Phone="20" Tablet="40" />
+           						</Button.BorderRadius>				
+							  </Button>
+                        </StackLayout>
+                        <StackLayout   VerticalOptions="CenterAndExpand">
+                            <Label Font="Bold"  Text="{Binding DeviceName}" VerticalOptions="EndAndExpand"/>
+                            <Label Text="{Binding PanelAddress}" VerticalOptions="StartAndExpand" TextColor="Silver" />
+                        </StackLayout>
+                  </StackLayout>	
+									<BoxView BackgroundColor="Silver" HeightRequest="1" />
+				</StackLayout>
+			 </ViewCell.View>	
+		</ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

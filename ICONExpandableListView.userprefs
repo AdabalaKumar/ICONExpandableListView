@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{4D5B3BDC-DCDA-40C2-8CD2-35404C5A87DE}|Default">
+  <MonoDevelop.Ide.ItemProperties.ICONExpandableListView.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.CC370CD2-F8F1-4730-868F-BE16BAC78024" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="ICONExpandableListView/Infrastructure/Grouping.cs" Line="19" Column="1" />
+      <File FileName="ICONExpandableListView/Models/DeviceInfo.cs" Line="20" Column="42" />
+      <File FileName="ICONExpandableListView/Models/WifiInfo.cs" Line="23" Column="19" />
+      <File FileName="ICONExpandableListView/Data/DataFactory.cs" Line="24" Column="44" />
+      <File FileName="ICONExpandableListView/App.xaml.cs" Line="11" Column="27" />
+      <File FileName="ICONExpandableListView/obj/Debug/ICONExpandableListView.Views.MainPage.xaml.g.cs" Line="1" Column="1" />
+      <File FileName="ICONExpandableListView/ViewModels/DeviceListViewModel.cs" Line="23" Column="17" />
+      <File FileName="ICONExpandableListView/Views/MainPage.xaml.cs" Line="29" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ICONExpandableListView.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+</Properties>
